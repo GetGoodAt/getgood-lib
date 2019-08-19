@@ -27,7 +27,7 @@ No build scripts, just publish hooks for now! Keeping it simple!
 Publish to npm using:
 
 ```sh
-$ npm publish
+$ npm dist
 ```
 
 ## License
