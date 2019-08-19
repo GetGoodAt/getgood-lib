@@ -1,0 +1,30 @@
+{
+  "name": "@getgood/lib",
+  "version": "0.0.1",
+  "description": "Shared components for GetGood.at",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copysrc": "cp -rf src/** dist",
+    "copypackage": "cp -rf package.json dist && cp -rf README.md dist",
+    "build:dist": "npm run copysrc && npm run copypackage",
+    "dist": "mkdir -p dist && npm run build:dist && cd dist && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getgoodat/getgood-lib.git"
+  },
+  "keywords": [
+    "lib",
+    "notes"
+  ],
+  "author": "K-2052",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getgoodat/getgood-lib/issues"
+  },
+  "homepage": "https://github.com/getgoodat/getgood-lib#readme",
+  "dependencies": {
+    "react-icons": "^3.7.0"
+  }
+}
