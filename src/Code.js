@@ -5,13 +5,17 @@ import Highlight from "react-highlight";
 const Code = ({ children, className, metastring }) => {
   const [replOpen, setReplOpen] = useState(false);
   let canOpenInRepl = false;
-  const language = className.match(/language-([a-z]+)/)[1];
+  let language = "";
 
-  if (
-    (language === "js" || language === "javascript") &&
-    metastring === "repl"
-  ) {
-    canOpenInRepl = true;
+  if (className) {
+    language = className.match(/language-([a-z]+)/)[1];
+
+    if (
+      (language === "js" || language === "javascript") &&
+      metastring === "repl"
+    ) {
+      canOpenInRepl = true;
+    }
   }
 
   if (replOpen) {
